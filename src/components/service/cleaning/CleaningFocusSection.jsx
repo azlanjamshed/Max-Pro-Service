@@ -1,18 +1,24 @@
+import React from "react";
+
+import commercialCleaning from "../../../assets/commercialCleaning.jpg";
+import industrialCleaning from "../../../assets/industrialCleaning.jpg";
+import medicalCleaning from "../../../assets/medicalCleaning.avif";
+
 const focusData = [
   {
     title: "COMMERCIAL EXCELLENCE",
     desc: "Professional cleaning for corporate offices and business environments",
-    image: "src/assets/commercialCleaning.jpg",
+    image: commercialCleaning,
   },
   {
     title: "INDUSTRIAL PRECISION",
     desc: "Specialized cleaning for warehouses, factories, and operational sites",
-    image: "src/assets/industrialCleaning.jpg",
+    image: industrialCleaning,
   },
   {
     title: "CLINICAL STANDARDS",
     desc: "Hygiene-focused cleaning for healthcare and wellness facilities",
-    image: "src/assets/medicalCleaning.avif",
+    image: medicalCleaning,
   },
 ];
 

@@ -1,16 +1,16 @@
 import React from "react";
 import ServiceCard from "./ServiceCard";
 import ServiceDetailCard from "./ServiceDetailCard";
-// import security from "../../../assets/security.jpeg";
-// import accessControl from "/accessControl.webp";
+import security from "../../../assets/security.jpeg";
+import accessControll from "../../../assets/accessControl.webp";
 const service = [
   {
-    img: "src/assets/security.jpeg",
+    img: security,
     title: "Office & Building Security",
     desc: "Comprehensive security solutions tailored for corporate offices, ensuring safety for employees, clients, and assets.",
   },
   {
-    img: "src/assets/accessControl.webp",
+    img: accessControll,
     title: "Access Control & Monitoring",
     desc: "Advanced access control systems and 24/7 monitoring for complete security coverage in corporate settings.",
   },
