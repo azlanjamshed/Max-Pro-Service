@@ -6,7 +6,8 @@ import {
   Mail,
   Phone,
 } from "lucide-react";
-
+import logo from "../assets/maxpro.jpeg";
+import { Link } from "react-router-dom";
 const Footer = () => {
   return (
     <footer className="bg-[#2E4A6B] text-white">
@@ -15,6 +16,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
           {/* Company */}
           <div>
+            <img src={logo} alt="MAXPRO" className="w-20 h-20 object-contain" />
             <h3 className="text-lg font-semibold mb-4 tracking-wide">
               SYDNEY MAXPRO
             </h3>
@@ -31,24 +33,24 @@ const Footer = () => {
             </h3>
             <ul className="space-y-2 text-sm text-gray-300">
               <li>
-                <a href="#" className="hover:text-white">
+                <Link to={"/"} className="hover:text-white">
                   Home
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="hover:text-white">
+                <Link to={"/security-service"} className="hover:text-white">
                   Services
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="hover:text-white">
+                <Link to={"/about"} className="hover:text-white">
                   About
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="hover:text-white">
+                <Link to={"/contact"} className="hover:text-white">
                   Contact
-                </a>
+                </Link>
               </li>
             </ul>
           </div>

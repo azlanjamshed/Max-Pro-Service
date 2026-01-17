@@ -90,9 +90,9 @@ const Navbar = () => {
       {/* Mobile Menu */}
       {menuOpen && (
         <div className="md:hidden bg-white border-t px-6 pb-4 space-y-3 text-sm">
-          <a href="#" className="block py-2">
+          <Link to={"/"} className="block py-2">
             Home
-          </a>
+          </Link>
 
           {/* Services Mobile */}
           <div>
@@ -105,8 +105,8 @@ const Navbar = () => {
             </button>
             {servicesOpen && (
               <div className="pl-4 space-y-2 text-gray-600 flex flex-col">
-                <a href="#">Securith Service</a>
-                <a href="#">Cleaning Service</a>
+                <Link to={"/security-service"}>Security Service</Link>
+                <Link to={"/cleaning-service"}>Cleaning Service</Link>
               </div>
             )}
           </div>
@@ -122,15 +122,15 @@ const Navbar = () => {
             </button>
             {aboutOpen && (
               <div className="pl-4 space-y-2 text-gray-600 flex flex-col">
-                <a href="#">About Us</a>
-                <a href="#">Our Team</a>
+                <Link to={"/about"}>About Us</Link>
+                <Link to={"/our-team"}>Our Team</Link>
               </div>
             )}
           </div>
 
-          <a href="#" className="block py-2">
+          <Link to={"/contact"} className="block py-2">
             Contact
-          </a>
+          </Link>
 
           <div className="pt-2 font-semibold">📞 0410 101 081</div>
 
