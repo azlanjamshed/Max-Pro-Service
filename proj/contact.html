@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sydney MaxPro Services - Contact us for professional cleaning and security services.">
+    <title>SYDNEY MAXPRO SERVICES PTY. | CONTACT</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚪</text></svg>">
+    
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        :root {
+            --anchor-blue: #2F4F6F;
+            --coastal-blue: #6FA3CB;
+            --sea-mist: #AFCAD6;
+            --linen-white: #FAFAF8;
+            --sand-driftwood: #D6CFC4;
+            --soft-grey: #E4E7EA;
+            --charcoal: #3A3F45;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--charcoal);
+            background-color: var(--linen-white);
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        main {
+            padding-top: 30px;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 2.2rem;
+            margin-bottom: 40px;
+            color: var(--anchor-blue);
+            position: relative;
+            padding-bottom: 15px;
+            font-weight: 700;
+        }
+        
+        .section-title:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background-color: var(--coastal-blue);
+        }
+        
+        /* Contact Hero */
+        .contact-hero {
+            height: 50vh;
+            min-height: 400px;
+            background: 
+                
+                url('images/contact banner.jpg') no-repeat center center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        
+        .contact-hero .container {
+            position: relative;
+            z-index: 2;
+        }
+        
+        /* Contact Information Section */
+        .contact-info-section {
+            padding: 80px 0;
+            background-color: var(--linen-white);
+        }
+        
+        .contact-info-grid {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .contact-info-card {
+            background: var(--linen-white);
+            border: 1px solid var(--soft-grey);
+            border-radius: 8px;
+            padding: 40px;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        
+        .contact-info-card h3 {
+            color: var(--anchor-blue);
+            margin-bottom: 30px;
+            font-size: 1.8rem;
+            font-weight: 700;
+            text-align: center;
+        }
+        
+        .contact-details {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+        
+        .contact-item {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+        
+        .contact-item h4 {
+            color: var(--anchor-blue);
+            font-size: 1rem;
+            font-weight: 600;
+        }
+        
+        .contact-item p {
+            color: var(--charcoal);
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+        
+        .contact-item a {
+            color: var(--coastal-blue);
+            text-decoration: none;
+            transition: color 0.3s;
+            font-weight: 500;
+        }
+        
+        .contact-item a:hover {
+            color: var(--anchor-blue);
+            text-decoration: underline;
+        }
+        
+        /* Contact Form Section */
+        .contact-form-section {
+            padding: 80px 0;
+            background-color: var(--soft-grey);
+        }
+        
+        .contact-form-wrapper {
+            max-width: 800px;
+            margin: 0 auto;
+            background: var(--linen-white);
+            border: 1px solid var(--soft-grey);
+            border-radius: 8px;
+            padding: 50px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        
+        #contactForm {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+        }
+        
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        
+        .form-group:nth-child(5),
+        .form-group:nth-child(6) {
+            grid-column: 1 / -1;
+        }
+        
+        .form-group label {
+            color: var(--anchor-blue);
+            font-weight: 600;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            padding: 12px 15px;
+            border: 1px solid var(--soft-grey);
+            border-radius: 4px;
+            font-family: 'Inter', sans-serif;
+            font-size: 1rem;
+            color: var(--charcoal);
+            background-color: var(--linen-white);
+            transition: all 0.3s;
+        }
+        
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--coastal-blue);
+        }
+        
+        .form-group textarea {
+            resize: vertical;
+            min-height: 150px;
+        }
+        
+        .form-submit {
+            grid-column: 1 / -1;
+            background-color: var(--anchor-blue);
+            color: var(--linen-white);
+            border: none;
+            padding: 15px 30px;
+            border-radius: 4px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-top: 10px;
+        }
+        
+        .form-submit:hover {
+            background-color: var(--coastal-blue);
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .contact-hero {
+                height: 40vh;
+                min-height: 300px;
+            }
+            
+            .section-title {
+                font-size: 1.8rem;
+            }
+            
+            #contactForm {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            .form-group:nth-child(5),
+            .form-group:nth-child(6) {
+                grid-column: auto;
+            }
+            
+            .contact-form-wrapper {
+                padding: 30px 20px;
+            }
+            
+            .contact-info-card {
+                padding: 30px 20px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .contact-hero {
+                height: 35vh;
+                min-height: 250px;
+            }
+            
+            .section-title {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+ <!-- GLOBAL NAVIGATION BAR -->
+<nav class="global-nav">
+    <div class="container">
+        <div class="nav-content">
+
+            <!-- LOGO -->
+            <div class="nav-logo-container">
+                <img src="images/maxpro.jpeg" alt="MAX PRO Cleaning Services" class="site-logo">
+                <div class="nav-logo">SYDNEY MAXPRO SERVICES AUS PTY LTD</div>
+            </div>
+
+            <!-- NAV MENU -->
+            <div class="nav-menu" id="navMenu">
+                <a href="index.html">HOME</a>
+
+                <!-- SERVICES DROPDOWN -->
+                <div class="nav-dropdown">
+                    <a href="services.html" class="nav-dropbtn">
+                        SERVICES <i class="fas fa-chevron-down"></i>
+                    </a>
+                    <div class="nav-dropdown-content">
+                        <a href="security.html">SECURITY SERVICES</a>
+                        <a href="cleaning.html">CLEANING SERVICES</a>
+                    </div>
+                </div>
+
+                <!-- WHO WE ARE DROPDOWN -->
+                <div class="nav-dropdown">
+                    <a href="about.html" class="nav-dropbtn">
+                        WHO WE ARE <i class="fas fa-chevron-down"></i>
+                    </a>
+                    <div class="nav-dropdown-content">
+                        <a href="about.html">ABOUT US</a>
+                        <a href="partners.html">OUR TEAM</a>
+                    </div>
+                </div>
+
+                <a href="contact.html">CONTACT</a>
+
+                <div class="nav-phone">PHONE: 0410 101 081</div>
+            </div>
+
+            <!-- MOBILE TOGGLE -->
+            <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+        </div>
+    </div>
+</nav>
+    <main>
+        <!-- PAGE 4 — CONTACT -->
+
+        <!-- Window 1 — Hero -->
+        <section class="contact-hero">
+            <div class="container">
+            </div>
+        </section>
+
+        <!-- CONTACT INFORMATION SECTION -->
+        <section class="contact-info-section">
+            <div class="container">
+                <div class="contact-info-grid">
+                    <div class="contact-info-card">
+                        <h3>CONTACT INFORMATION</h3>
+                        <div class="contact-details">
+                            <div class="contact-item">
+                                <h4>Email:</h4>
+                                <p><a href="mailto:admin@sydneymaxpro.com.au">admin@sydneymaxpro.com.au</a></p>
+                            </div>
+                            <div class="contact-item">
+                                <h4>Contact Numbers:</h4>
+                                <p>0410 101 081 – Bassam Masri (Director)</p>
+                                <p>0466 985 612 –  Japneet Dara (Finance Manager)</p>
+                            </div>
+                            <div class="contact-item">
+                                <h4>Location:</h4>
+                                <p>Sydney, NSW</p>
+                            </div>
+                            <div class="contact-item">
+                                <h4>Website:</h4>
+                                <p><a href="https://sydneymaxpro.com.au/" target="_blank" rel="noopener noreferrer">www.sydneymaxpro.com</a></p>
+                            </div>
+                            <div class="contact-item">
+                               
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Form -->
+        <section class="contact-form-section">
+            <div class="container">
+                <h2 class="section-title">GET IN TOUCH</h2>
+                <div class="contact-form-wrapper">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">NAME</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone">PHONE</label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">EMAIL</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="service">SERVICE INTEREST</label>
+                            <select id="service" name="service">
+                                <option value="">Select a service</option>
+                                <option value="security">Security Services</option>
+                                <option value="cleaning">Cleaning Services</option>
+                                <option value="both">Both Services</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">MESSAGE</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="form-submit">SUBMIT</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- GLOBAL FOOTER -->
+    <footer class="global-footer">
+        <div class="footer-breathing-space"></div>
+        <div class="footer-content">
+            <div class="container">
+                <div class="footer-grid">
+                    <!-- Column 1 — Business Identity -->
+                    <div class="footer-column">
+                        <h4>SYDNEY MAXPRO</h4>
+                        <h4>SERVICES PTY LTD</h4>
+                    </div>
+                    
+                    <!-- Column 2 — Quick Links -->
+                    <div class="footer-column">
+                        <a href="index.html">HOME</a>
+                        <a href="services.html">SERVICES</a>
+                        <a href="about.html">ABOUT</a>
+                        <a href="contact.html">CONTACT</a>
+                    </div>
+                    
+                    <!-- Column 3 — Contact -->
+                    <div class="footer-column">
+                        <p>PHONE: 0410 101 081</p>
+                        <p>EMAIL: ADMIN@SYDNEYMAXPRO.COM.AU</p>
+                    </div>
+                    
+                    <!-- Column 4 — Social -->
+                    <div class="footer-column">
+                        <a href="https://www.linkedin.com/company/sydney-maxpro-services-aus-pty-ltd/" class="linkedin-link">
+                            <i class="fab fa-linkedin linkedin-icon"></i>
+                            LINKEDIN
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

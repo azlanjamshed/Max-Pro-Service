@@ -1,0 +1,1049 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sydney MaxPro Services - Professional cleaning services for commercial, medical, educational and industrial facilities.">
+    <title>SYDNEY MAXPRO SERVICES PTY. | CLEANING SERVICES</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚪</text></svg>">
+    <style>
+        .cleaning-hero {
+            height: 60vh;
+            min-height: 500px;
+            background: 
+                linear-gradient(rgba(47, 79, 111, 0.85), rgba(47, 79, 111, 0.92)),
+                url('images/cleaning.jpg') center/cover no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            text-align: center;
+        }
+
+        .cleaning-hero .container {
+            position: relative;
+            z-index: 2;
+        }
+
+        .cleaning-hero h1 {
+            color: var(--linen-white);
+            font-size: clamp(2.5rem, 6vw, 4rem);
+            font-weight: var(--weight-bold);
+            margin-bottom: 1.5rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .hero-subtitle {
+            color: var(--sea-mist);
+            font-size: clamp(1.1rem, 2vw, 1.3rem);
+            max-width: 600px;
+            margin: 0 auto;
+            font-weight: var(--weight-regular);
+            line-height: 1.6;
+        }
+
+        /* Services Introduction - Clean & Minimal */
+        .services-intro {
+            padding: calc(var(--section-spacing) * 1.2) 0 calc(var(--section-spacing) * 0.5) 0;
+            background-color: var(--linen-white);
+            position: relative;
+        }
+
+        .services-intro::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, 
+                transparent 0%, 
+                var(--coastal-blue) 50%, 
+                transparent 100%);
+        }
+
+        .services-intro h2 {
+            font-size: clamp(2rem, 4vw, 3rem);
+            text-align: center;
+            margin-bottom: 2.5rem;
+            position: relative;
+            padding-bottom: 1.5rem;
+        }
+
+        .services-intro h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background-color: var(--coastal-blue);
+        }
+
+        /* 3-Grid Layout */
+        .grid-layout-section {
+            padding: calc(var(--section-spacing) * 0.5) 0 var(--section-spacing) 0;
+            background-color: var(--linen-white);
+        }
+
+        .grid-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            margin-top: -50px;
+            padding: 0 1rem;
+        }
+
+        .services-grid-three {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+            margin-top: 0;
+        }
+
+        .grid-item {
+            position: relative;
+            border-radius: 8px;
+            overflow: hidden;
+            height: 350px;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .grid-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .grid-image {
+            width: 100%;
+            height: 100%;
+            position: relative;
+        }
+
+        .grid-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        .grid-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(
+                to bottom,
+                rgba(47, 79, 111, 0.3) 0%,
+                rgba(47, 79, 111, 0.7) 100%
+            );
+        }
+
+        .grid-content {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 2rem;
+            color: var(--linen-white);
+            background: linear-gradient(
+                to top,
+                rgba(47, 79, 111, 0.9) 0%,
+                rgba(47, 79, 111, 0.5) 50%,
+                transparent 100%
+            );
+        }
+
+        .grid-content h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            font-weight: var(--weight-bold);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: white;
+        }
+
+        .grid-content p {
+            font-size: 1rem;
+            opacity: 0.9;
+            line-height: 1.4;
+            color: white;
+        }
+
+        /* Service Categories - Elegant List Layout */
+        .service-categories {
+            padding: var(--section-spacing) 0;
+            background-color: var(--soft-grey);
+        }
+
+        .categories-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .category-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 2rem;
+            padding: 2.5rem 0;
+            border-bottom: 1px solid rgba(214, 207, 196, 0.3);
+        }
+
+        .category-item:last-child {
+            border-bottom: none;
+        }
+
+        .category-icon {
+            width: 60px;
+            height: 60px;
+            background: var(--anchor-blue);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            transition: all 0.3s ease;
+        }
+
+        .category-item:hover .category-icon {
+            background: var(--coastal-blue);
+            transform: scale(1.1);
+        }
+
+        .category-icon i {
+            color: var(--linen-white);
+            font-size: 1.5rem;
+        }
+
+        .category-content {
+            flex: 1;
+        }
+
+        .category-content h3 {
+            color: var(--anchor-blue);
+            margin-bottom: 0.75rem;
+            font-size: 1.5rem;
+        }
+
+        .category-content p {
+            color: var(--charcoal);
+            line-height: 1.7;
+            font-size: 1.05rem;
+        }
+
+        .category-content strong {
+            color: var(--anchor-blue);
+            font-weight: var(--weight-bold);
+        }
+
+        /* Service Tiles - Minimal Card Design */
+        .service-tiles-section {
+            padding: var(--section-spacing) 0;
+            background-color: var(--linen-white);
+        }
+
+        .tiles-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .tile-card {
+            background: var(--linen-white);
+            border: 1px solid var(--soft-grey);
+            border-radius: 8px;
+            padding: 2.5rem;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .tile-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: var(--coastal-blue);
+            transform: translateY(-100%);
+            transition: transform 0.3s ease;
+        }
+
+        .tile-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(47, 79, 111, 0.1);
+        }
+
+        .tile-card:hover::before {
+            transform: translateY(0);
+        }
+
+        .tile-card h3 {
+            color: var(--anchor-blue);
+            margin-bottom: 1.5rem;
+            font-size: 1.5rem;
+            text-align: center;
+        }
+
+        .tile-card ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .tile-card li {
+            color: var(--charcoal);
+            padding: 0.5rem 0;
+            border-bottom: 1px solid var(--soft-grey);
+            position: relative;
+            padding-left: 1.5rem;
+        }
+
+        .tile-card li:last-child {
+            border-bottom: none;
+        }
+
+        .tile-card li::before {
+            content: '•';
+            position: absolute;
+            left: 0;
+            color: var(--coastal-blue);
+            font-size: 1.2rem;
+            line-height: 1;
+        }
+
+        /* Care Levels - Clean Table-like Design */
+        .care-levels {
+            padding: calc(var(--section-spacing) * 1.5) 0;
+            background-color: var(--sand-driftwood);
+        }
+
+        .care-levels-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .care-levels-header h2 {
+            font-size: clamp(2rem, 4vw, 3rem);
+            margin-bottom: 1rem;
+            position: relative;
+            display: inline-block;
+        }
+
+        .care-levels-header h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 3px;
+            background-color: var(--coastal-blue);
+        }
+
+        .levels-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .level-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .level-item {
+            background: var(--linen-white);
+            padding: 2.5rem;
+            border-radius: 8px;
+            position: relative;
+        }
+
+        .level-header {
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid var(--sea-mist);
+        }
+
+        .level-header h3 {
+            color: var(--anchor-blue);
+            font-size: 1.75rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .level-includes {
+            color: var(--charcoal);
+            font-size: 0.9rem;
+            font-weight: var(--weight-bold);
+            margin-bottom: 1rem;
+        }
+
+        .level-features {
+            list-style: none;
+            padding: 0;
+        }
+
+        .level-features li {
+            color: var(--charcoal);
+            padding: 0.5rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+            line-height: 1.6;
+        }
+
+        .level-features li::before {
+            content: '—';
+            position: absolute;
+            left: 0;
+            color: var(--coastal-blue);
+        }
+
+        .bespoke-section {
+            background: var(--anchor-blue);
+            padding: 3rem;
+            border-radius: 8px;
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .bespoke-section h3 {
+            color: var(--linen-white);
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .bespoke-section p {
+            color: var(--sea-mist);
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Services List - Minimal Grid */
+        .cleaning-services {
+            padding: var(--section-spacing) 0;
+            background-color: var(--linen-white);
+        }
+
+        .services-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .services-header h2 {
+            font-size: clamp(2rem, 4vw, 3rem);
+            margin-bottom: 1rem;
+            position: relative;
+            display: inline-block;
+        }
+
+        .services-header h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 120px;
+            height: 3px;
+            background-color: var(--coastal-blue);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .service-item {
+            padding: 2rem;
+            border-left: 3px solid var(--coastal-blue);
+            transition: all 0.3s ease;
+        }
+
+        .service-item:hover {
+            background: var(--soft-grey);
+            transform: translateX(5px);
+        }
+
+        .service-item h3 {
+            color: var(--anchor-blue);
+            margin-bottom: 0.75rem;
+            font-size: 1.2rem;
+        }
+
+        .service-item p {
+            color: var(--charcoal);
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        /* Contracts Section - Clean Layout */
+        .contracts-section {
+            padding: var(--section-spacing) 0;
+            background-color: var(--sand-driftwood);
+        }
+
+        .contracts-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .contracts-header h2 {
+            font-size: clamp(2rem, 4vw, 3rem);
+            margin-bottom: 1rem;
+            position: relative;
+            display: inline-block;
+        }
+
+        .contracts-header h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 120px;
+            height: 3px;
+            background-color: var(--coastal-blue);
+        }
+
+        .contracts-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .contract-item {
+            background: var(--linen-white);
+            padding: 2rem;
+            margin-bottom: 1.5rem;
+            border-radius: 6px;
+            border-left: 4px solid var(--anchor-blue);
+            transition: all 0.3s ease;
+        }
+
+        .contract-item:hover {
+            transform: translateX(5px);
+            box-shadow: 0 5px 20px rgba(47, 79, 111, 0.1);
+        }
+
+        .contract-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .contract-item h3 {
+            color: var(--anchor-blue);
+            margin-bottom: 0.5rem;
+            font-size: 1.3rem;
+        }
+
+        .contract-item p {
+            color: var(--charcoal);
+            font-size: 1rem;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .category-item,
+        .tile-card,
+        .level-item,
+        .service-item,
+        .contract-item,
+        .grid-item {
+            animation: fadeIn 0.6s ease-out;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .services-grid-three {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 1rem;
+            }
+            
+            .grid-item {
+                height: 300px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .cleaning-hero {
+                height: 50vh;
+                min-height: 400px;
+                padding: 2rem 1rem;
+            }
+
+            .cleaning-hero h1 {
+                font-size: clamp(2rem, 5vw, 2.5rem);
+            }
+
+            .services-grid-three {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1rem;
+            }
+            
+            .grid-item {
+                height: 280px;
+            }
+            
+            .grid-content {
+                padding: 1.5rem;
+            }
+            
+            .grid-content h3 {
+                font-size: 1.3rem;
+            }
+
+            .category-item {
+                flex-direction: column;
+                gap: 1.5rem;
+                padding: 2rem 0;
+            }
+
+            .category-icon {
+                width: 50px;
+                height: 50px;
+            }
+
+            .category-icon i {
+                font-size: 1.25rem;
+            }
+
+            .tiles-container {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .level-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .services-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1rem;
+            }
+
+            .contract-item {
+                padding: 1.5rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .cleaning-hero {
+                height: 40vh;
+                min-height: 300px;
+            }
+
+            .services-grid-three {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+            
+            .grid-item {
+                height: 250px;
+            }
+            
+            .grid-content h3 {
+                font-size: 1.2rem;
+            }
+            
+            .grid-content p {
+                font-size: 0.9rem;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .bespoke-section {
+                padding: 2rem 1.5rem;
+            }
+
+            .category-item,
+            .tile-card,
+            .level-item {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- GLOBAL NAVIGATION BAR -->
+    <nav class="global-nav">
+        <div class="container">
+            <div class="nav-content">
+                <!-- LOGO -->
+                <div class="nav-logo-container">
+                    <img src="images/maxpro.jpeg" alt="MAX PRO Cleaning Services" class="site-logo">
+                    <div class="nav-logo">SYDNEY MAXPRO SERVICES AUS PTY LTD</div>
+                </div>
+
+                <!-- NAV MENU -->
+                <div class="nav-menu" id="navMenu">
+                    <a href="index.html">HOME</a>
+
+                    <!-- SERVICES DROPDOWN -->
+                    <div class="nav-dropdown">
+                        <a href="services.html" class="nav-dropbtn">
+                            SERVICES <i class="fas fa-chevron-down"></i>
+                        </a>
+                        <div class="nav-dropdown-content">
+                            <a href="security.html">SECURITY SERVICES</a>
+                            <a href="cleaning.html">CLEANING SERVICES</a>
+                        </div>
+                    </div>
+
+                    <!-- WHO WE ARE DROPDOWN -->
+                    <div class="nav-dropdown">
+                        <a href="about.html" class="nav-dropbtn">
+                            WHO WE ARE <i class="fas fa-chevron-down"></i>
+                        </a>
+                        <div class="nav-dropdown-content">
+                            <a href="about.html">ABOUT US</a>
+                            <a href="partners.html">OUR TEAM</a>
+                        </div>
+                    </div>
+
+                    <a href="contact.html">CONTACT</a>
+
+                    <div class="nav-phone">PHONE: 0410 101 081</div>
+                </div>
+
+                <!-- MOBILE TOGGLE -->
+                <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- CLEANING SERVICES HERO -->
+        <section class="cleaning-hero">
+            <div class="container">
+                <h1>CLEANING SERVICES</h1>
+                <p class="hero-subtitle">Professional cleaning solutions for every environment</p>
+            </div>
+        </section>
+
+        <!-- Window 1 — Services Introduction -->
+        <section class="services-intro">
+            <div class="container">
+                <h2>LET'S MAKE CLEAR & CLEAN.</h2>
+            </div>
+        </section>
+
+        <!-- Window 2 — 3-Grid Layout -->
+        <section class="grid-layout-section">
+            <div class="grid-container">
+                <div class="services-grid-three">
+                    <!-- Grid Item 1: Commercial Cleaning -->
+                    <div class="grid-item">
+                        <div class="grid-image">
+                            <img src="images/commercial.jpg" alt="Commercial office cleaning services">
+                            <div class="grid-overlay"></div>
+                        </div>
+                        <div class="grid-content">
+                            <h3>Commercial Excellence</h3>
+                            <p>Professional cleaning for corporate offices and business environments</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Grid Item 2: Industrial Cleaning -->
+                    <div class="grid-item">
+                        <div class="grid-image">
+                            <img src="images/industrial cleaning.jpg" alt="Industrial facility cleaning services">
+                            <div class="grid-overlay"></div>
+                        </div>
+                        <div class="grid-content">
+                            <h3>Industrial Precision</h3>
+                            <p>Specialized cleaning for warehouses, factories, and operational sites</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Grid Item 3: Medical Cleaning -->
+                    <div class="grid-item">
+                        <div class="grid-image">
+                            <img src="images/medical.avif" alt="Medical facility cleaning services">
+                            <div class="grid-overlay"></div>
+                        </div>
+                        <div class="grid-content">
+                            <h3>Clinical Standards</h3>
+                            <p>Hygiene-focused cleaning for healthcare and wellness facilities</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Window 3 — Service Categories -->
+        <section class="service-categories">
+            <div class="container">
+                <div class="categories-container">
+                    <!-- Residential -->
+                    <div class="category-item">
+                        <div class="category-icon">
+                            <i class="fas fa-home"></i>
+                        </div>
+                        <div class="category-content">
+                            <h3>RESIDENTIAL</h3>
+                            <p>Sydney MaxPro services private homes, apartments, and managed residences. Work is delivered with care, discretion, and respect for personal spaces and daily routines.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Commercial -->
+                    <div class="category-item">
+                        <div class="category-icon">
+                            <i class="fas fa-building"></i>
+                        </div>
+                        <div class="category-content">
+                            <h3>COMMERCIAL</h3>
+                            <p>We support offices and professional workplaces where <strong>consistency</strong>, <strong>presentation</strong>, and minimal <strong>disruption</strong> are essential to ongoing operations.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Retail -->
+                    <div class="category-item">
+                        <div class="category-icon">
+                            <i class="fas fa-shopping-cart"></i>
+                        </div>
+                        <div class="category-content">
+                            <h3>RETAIL</h3>
+                            <p>Retail environments are maintained to align with <strong>brand standards</strong>, customer experience, and trading requirements across varying hours.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Industrial -->
+                    <div class="category-item">
+                        <div class="category-icon">
+                            <i class="fas fa-industry"></i>
+                        </div>
+                        <div class="category-content">
+                            <h3>INDUSTRIAL</h3>
+                            <p>Industrial and operational sites are serviced with <strong>attention</strong> to safety, access requirements, and practical execution suited to site conditions.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Wellness -->
+                    <div class="category-item">
+                        <div class="category-icon">
+                            <i class="fas fa-heartbeat"></i>
+                        </div>
+                        <div class="category-content">
+                            <h3>WELLNESS & CLINICAL</h3>
+                            <p>We operate within wellness, allied health, and clinical spaces where hygiene standards and controlled processes are critical.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Window 4 — We Care at All Levels -->
+        <section class="care-levels">
+            <div class="container">
+                <div class="care-levels-header">
+                    <h2>WE CARE AT ALL LEVELS</h2>
+                </div>
+                
+                <div class="levels-container">
+                    <div class="level-grid">
+                        <!-- Light Level -->
+                        <div class="level-item">
+                            <div class="level-header">
+                                <h3>LIGHT</h3>
+                            </div>
+                            <ul class="level-features">
+                                <li>Light dusting of accessible surfaces</li>
+                                <li>Benchtops and furniture surfaces wiped</li>
+                                <li>Vacuum of carpeted areas</li>
+                                <li>Light mop of hard floors</li>
+                                <li>Basic bathroom refresh (toilet, basin, mirror)</li>
+                            </ul>
+                        </div>
+                        
+                        <!-- Medium Level -->
+                        <div class="level-item">
+                            <div class="level-header">
+                                <h3>MEDIUM</h3>
+                            </div>
+                            <p class="level-includes">Includes all LIGHT tasks, plus:</p>
+                            <ul class="level-features">
+                                <li>More thorough dusting of accessible surfaces</li>
+                                <li>Proper stovetop clean (light—medium grease)</li>
+                                <li>Touch-point wiping (switches, handles)</li>
+                                <li>Full bathroom clean (toilet, basin, shower screen)</li>
+                                <li>Cobweb removal</li>
+                            </ul>
+                        </div>
+                        
+                        <!-- Premium Level -->
+                        <div class="level-item">
+                            <div class="level-header">
+                                <h3>PREMIUM</h3>
+                            </div>
+                            <p class="level-includes">Includes all LIGHT + MEDIUM tasks, plus:</p>
+                            <ul class="level-features">
+                                <li>Deep bathroom clean (grout, taps, detailed areas)</li>
+                                <li>Stovetop and rangehood detailing</li>
+                                <li>Internal window cleaning (reachable areas)</li>
+                                <li>Edge detailing on floors</li>
+                                <li>Higher-reach dusting</li>
+                                <li>Heavy pet hair removal</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="bespoke-section">
+                        <h3>AND THEN WE HAVE BESPOKE</h3>
+                        <p>Custom cleaning solutions tailored to your specific needs and requirements</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CLEANING SERVICES LIST -->
+        <section class="cleaning-services">
+            <div class="container">
+                <div class="services-header">
+                    <h2>OUR CLEANING SERVICES</h2>
+                </div>
+                
+                <div class="services-grid">
+                    <div class="service-item">
+                        <h3>Commercial & Corporate Cleaning</h3>
+                        <p>Professional office cleaning services</p>
+                    </div>
+                    <div class="service-item">
+                        <h3>Educational & University Cleaning</h3>
+                        <p>Campus and facility cleaning services</p>
+                    </div>
+                    <div class="service-item">
+                        <h3>Medical & Clinical Cleaning</h3>
+                        <p>Healthcare facility cleaning</p>
+                    </div>
+                    <div class="service-item">
+                        <h3>Data Centres & High-Security Environments</h3>
+                        <p>Specialized technical environment cleaning</p>
+                    </div>
+                    <div class="service-item">
+                        <h3>Pharmaceutical & Warehouse Cleaning</h3>
+                        <p>Industrial and pharmaceutical-grade cleaning</p>
+                    </div>
+                    <div class="service-item">
+                        <h3>Public Venues & High-Foot-Traffic Sites</h3>
+                        <p>Museum and public space cleaning</p>
+                    </div>
+                    <div class="service-item">
+                        <h3>Day, Night & Weekend Cleaning</h3>
+                        <p>Flexible scheduling to suit your needs</p>
+                    </div>
+                    <div class="service-item">
+                        <h3>Ad-Hoc & Emergency Cleaning</h3>
+                        <p>Rapid response cleaning services</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CURRENT & RECENT CONTRACTS -->
+        <section class="contracts-section">
+            <div class="container">
+                <div class="contracts-header">
+                    <h2>OUR CURRENT & RECENT CLEANING CONTRACTS</h2>
+                </div>
+                
+                <div class="contracts-container">
+                    <div class="contract-item">
+                        <h3>Western Sydney University – Parramatta Campus</h3>
+                        <p>Commercial & institutional cleaning services</p>
+                    </div>
+                    <div class="contract-item">
+                        <h3>Museum of Illusions Sydney</h3>
+                        <p>Public venue & high-foot-traffic cleaning</p>
+                    </div>
+                    <div class="contract-item">
+                        <h3>Irfan College – Cecil Park Campus</h3>
+                        <p>Educational facility cleaning services</p>
+                    </div>
+                    <div class="contract-item">
+                        <h3>Australian Pharmaceutical Industries – Marsden Park, NSW</h3>
+                        <p>Warehouse & pharmaceutical-grade cleaning</p>
+                    </div>
+                    <div class="contract-item">
+                        <h3>Fujitsu – Data Centre Services & Solutions (Australia)</h3>
+                        <p>High-security & technical environment cleaning</p>
+                    </div>
+                    <div class="contract-item">
+                        <h3>Medical Centre – Revesby, NSW</h3>
+                        <p>Clinical & healthcare cleaning services</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- GLOBAL FOOTER -->
+    <footer class="global-footer">
+        <div class="footer-breathing-space"></div>
+        <div class="footer-content">
+            <div class="container">
+                <div class="footer-grid">
+                    <!-- Column 1 — Business Identity -->
+                    <div class="footer-column">
+                        <h4>SYDNEY MAXPRO</h4>
+                        <h4>SERVICES PTY LTD</h4>
+                    </div>
+                    
+                    <!-- Column 2 — Quick Links -->
+                    <div class="footer-column">
+                        <a href="index.html">HOME</a>
+                        <a href="services.html">SERVICES</a>
+                        <a href="about.html">ABOUT</a>
+                        <a href="contact.html">CONTACT</a>
+                    </div>
+                    
+                    <!-- Column 3 — Contact -->
+                    <div class="footer-column">
+                        <p>PHONE: 0410 101 081</p>
+                        <p>EMAIL: ADMIN@SYDNEYMAXPRO.COM.AU</p>
+                    </div>
+                    
+                    <!-- Column 4 — Social -->
+                    <div class="footer-column">
+                        <a href="https://www.linkedin.com/company/sydney-maxpro-services-aus-pty-ltd/" class="linkedin-link">
+                            <i class="fab fa-linkedin linkedin-icon"></i>
+                            LINKEDIN
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

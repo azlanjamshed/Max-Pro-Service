@@ -1,0 +1,1070 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sydney MaxPro Services - Professional security services for construction sites, schools, warehouses and corporate environments.">
+    <title>SYDNEY MAXPRO SERVICES PTY. | SECURITY SERVICES</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚪</text></svg>">
+    <style>
+      
+        .security-hero {
+            height: 70vh;
+            min-height: 600px;
+            background: 
+                linear-gradient(rgba(47, 79, 111, 0.9), rgba(47, 79, 111, 0.95)),
+                url('images/security-hero.jpg') center/cover no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .security-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 30% 20%, rgba(175, 202, 214, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 70% 80%, rgba(111, 163, 203, 0.1) 0%, transparent 50%);
+            animation: floatBackground 25s ease-in-out infinite alternate;
+        }
+
+        @keyframes floatBackground {
+            0% {
+                transform: translate(0, 0) scale(1);
+            }
+            100% {
+                transform: translate(-40px, 30px) scale(1.05);
+            }
+        }
+
+        .security-hero h1 {
+            color: var(--linen-white);
+            font-size: clamp(3rem, 6vw, 5rem);
+            font-weight: var(--weight-bold);
+            text-align: center;
+            position: relative;
+            z-index: 2;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+            animation: fadeInDown 1s ease-out;
+        }
+
+        .hero-subtitle {
+            color: var(--sea-mist);
+            font-size: clamp(1.2rem, 2.5vw, 1.5rem);
+            text-align: center;
+            max-width: 600px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+            animation: fadeInUp 1s ease-out 0.3s both;
+            line-height: 1.6;
+        }
+
+        /* Security Sections - Elegant Layout */
+        .security-section {
+            padding: calc(var(--section-spacing) * 1.5) 0;
+            position: relative;
+            background: var(--linen-white);
+        }
+
+        .security-section.alt-bg {
+            background: linear-gradient(135deg, 
+                var(--soft-grey) 0%, 
+                rgba(228, 231, 234, 0.8) 100%);
+        }
+
+        .security-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, 
+                transparent, 
+                var(--coastal-blue), 
+                transparent);
+        }
+
+        .section-title {
+            font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+            color: var(--anchor-blue);
+            margin-bottom: 2.5rem;
+            position: relative;
+            padding-bottom: 1.2rem;
+            text-align: center;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 0.8s ease-out forwards;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background: var(--coastal-blue);
+            animation: lineExpand 1s ease-out 0.5s both;
+        }
+
+        @keyframes lineExpand {
+            from {
+                width: 0;
+            }
+            to {
+                width: 80px;
+            }
+        }
+
+        /* Security Content */
+        .security-content {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .security-content > p {
+            font-size: clamp(1.1rem, 1.8vw, 1.25rem);
+            line-height: 1.8;
+            color: var(--charcoal);
+            margin-bottom: 2.5rem;
+            text-align: center;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 0.8s ease-out 0.3s forwards;
+        }
+
+        /* Services List - Elegant Design */
+        .services-list {
+            background: transparent;
+            padding: 0;
+            position: relative;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 0.8s ease-out 0.5s forwards;
+        }
+
+        .services-list h3 {
+            color: var(--anchor-blue);
+            font-size: clamp(1.4rem, 2.2vw, 1.8rem);
+            margin-bottom: 1.5rem;
+            text-align: center;
+            position: relative;
+            padding-bottom: 0.8rem;
+        }
+
+        .services-list h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 2px;
+            background: var(--coastal-blue);
+        }
+
+        .services-list ul {
+            list-style: none;
+            padding: 0;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .services-list li {
+            padding: 1rem 0;
+            padding-left: 2.5rem;
+            position: relative;
+            color: var(--charcoal);
+            line-height: 1.6;
+            border-bottom: 1px solid rgba(214, 207, 196, 0.3);
+            font-size: clamp(1rem, 1.5vw, 1.1rem);
+            transition: all 0.3s ease;
+        }
+
+        .services-list li:last-child {
+            border-bottom: none;
+        }
+
+        .services-list li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--coastal-blue);
+            font-size: 1.2rem;
+            font-weight: bold;
+            width: 1.8rem;
+            height: 1.8rem;
+            background: rgba(111, 163, 203, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+
+        .services-list li:hover {
+            transform: translateX(10px);
+            color: var(--anchor-blue);
+        }
+
+        .services-list li:hover::before {
+            background: var(--coastal-blue);
+            color: var(--linen-white);
+            transform: scale(1.1);
+        }
+
+        .services-list li strong {
+            color: var(--anchor-blue);
+            font-weight: var(--weight-bold);
+        }
+
+        /* Current Site - Elegant Badge */
+        .current-site {
+            margin-top: 3rem;
+            padding: 2rem;
+            background: linear-gradient(135deg, 
+                rgba(111, 163, 203, 0.1) 0%, 
+                rgba(175, 202, 214, 0.05) 100%);
+            border-radius: 10px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 0.8s ease-out 0.7s forwards;
+        }
+
+        .current-site::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, 
+                var(--coastal-blue), 
+                var(--anchor-blue));
+        }
+
+        .current-site h4 {
+            color: var(--anchor-blue);
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+            font-weight: var(--weight-bold);
+        }
+
+        .current-site p {
+            color: var(--charcoal);
+            font-size: 1.1rem;
+            font-weight: var(--weight-regular);
+        }
+
+        /* Corporate Security Grid */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 3rem;
+            margin-top: 2rem;
+        }
+
+        .service-card {
+            padding: 2.5rem;
+            position: relative;
+            background: transparent;
+            transition: all 0.4s ease;
+            border-radius: 8px;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 0.8s ease-out forwards;
+        }
+
+        .service-card:nth-child(1) {
+            animation-delay: 0.3s;
+        }
+
+        .service-card:nth-child(2) {
+            animation-delay: 0.5s;
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, 
+                rgba(47, 79, 111, 0.05) 0%, 
+                rgba(111, 163, 203, 0.03) 100%);
+            border-radius: 8px;
+            z-index: -1;
+            transition: all 0.4s ease;
+        }
+
+        .service-card:hover::before {
+            background: linear-gradient(135deg, 
+                rgba(47, 79, 111, 0.08) 0%, 
+                rgba(111, 163, 203, 0.05) 100%);
+            transform: translateY(-5px);
+        }
+
+        .service-card h3 {
+            color: var(--anchor-blue);
+            font-size: clamp(1.3rem, 2vw, 1.6rem);
+            margin-bottom: 1.2rem;
+            position: relative;
+            padding-bottom: 0.8rem;
+        }
+
+        .service-card h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 2px;
+            background: var(--coastal-blue);
+            transition: width 0.3s ease;
+        }
+
+        .service-card:hover h3::after {
+            width: 100px;
+        }
+
+        .service-card p {
+            color: var(--charcoal);
+            line-height: 1.7;
+            font-size: 1.05rem;
+        }
+
+        /* Security Feature Icons */
+        .security-feature {
+            position: absolute;
+            font-size: 8rem;
+            color: rgba(175, 202, 214, 0.1);
+            z-index: 0;
+            pointer-events: none;
+            animation: floatIcon 20s ease-in-out infinite alternate;
+        }
+
+        .security-feature:nth-child(1) {
+            top: 10%;
+            left: 5%;
+            animation-delay: -5s;
+        }
+
+        .security-feature:nth-child(2) {
+            bottom: 10%;
+            right: 5%;
+            animation-delay: -10s;
+        }
+
+        @keyframes floatIcon {
+            0% {
+                transform: translate(0, 0) rotate(0deg);
+            }
+            100% {
+                transform: translate(30px, -30px) rotate(5deg);
+            }
+        }
+
+        /* Animations */
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .security-hero {
+                height: 60vh;
+                min-height: 500px;
+            }
+
+            .security-hero h1 {
+                font-size: clamp(2.5rem, 5vw, 4rem);
+            }
+
+            .hero-subtitle {
+                font-size: clamp(1.1rem, 2vw, 1.3rem);
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .service-card {
+                padding: 2rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .security-hero {
+                height: 50vh;
+                min-height: 400px;
+                padding: 2rem 1rem;
+            }
+
+            .security-hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1.1rem;
+            }
+
+            .security-content {
+                padding: 0 1rem;
+            }
+
+            .services-list li {
+                padding-left: 2rem;
+                font-size: 1rem;
+            }
+
+            .current-site {
+                padding: 1.5rem;
+            }
+
+            .section-title {
+                font-size: 1.8rem;
+                padding: 0 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .security-hero {
+                height: 40vh;
+                min-height: 300px;
+            }
+
+            .security-hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1rem;
+            }
+
+            .services-list li {
+                padding-left: 1.8rem;
+                font-size: 0.95rem;
+            }
+
+            .service-card {
+                padding: 1.5rem;
+            }
+
+            .security-feature {
+                font-size: 5rem;
+            }
+        }
+/* Corporate Image Grid Styles */
+.corporate-image-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2.5rem;
+    margin: 3rem auto;
+    max-width: 1200px;
+    opacity: 0;
+    transform: translateY(40px);
+    animation: fadeInUp 0.8s ease-out 0.4s forwards;
+}
+
+.corporate-image-card {
+    position: relative;
+    background: var(--linen-white);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(47, 79, 111, 0.1);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.corporate-image-card:nth-child(1) {
+    animation-delay: 0.5s;
+}
+
+.corporate-image-card:nth-child(2) {
+    animation-delay: 0.7s;
+}
+
+.corporate-image-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(47, 79, 111, 0.15);
+}
+
+.image-wrapper {
+    position: relative;
+    height: 280px;
+    overflow: hidden;
+}
+
+.image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    filter: brightness(0.95);
+}
+
+.corporate-image-card:hover .image-wrapper img {
+    transform: scale(1.05);
+    filter: brightness(1);
+}
+
+.image-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent, rgba(47, 79, 111, 0.9));
+    color: var(--linen-white);
+    padding: 2rem;
+    transform: translateY(100%);
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.corporate-image-card:hover .image-overlay {
+    transform: translateY(0);
+}
+
+.image-overlay h4 {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+    font-weight: var(--weight-bold);
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.3s ease 0.1s;
+}
+
+.image-overlay p {
+    font-size: 0.9rem;
+    opacity: 0.9;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.3s ease 0.2s;
+}
+
+.corporate-image-card:hover .image-overlay h4,
+.corporate-image-card:hover .image-overlay p {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.image-content {
+    padding: 1.8rem;
+    background: var(--linen-white);
+}
+
+.image-content h4 {
+    color: var(--anchor-blue);
+    font-size: 1.25rem;
+    margin-bottom: 0.8rem;
+    position: relative;
+    padding-bottom: 0.8rem;
+}
+
+.image-content h4::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 40px;
+    height: 2px;
+    background: var(--coastal-blue);
+    transition: width 0.3s ease;
+}
+
+.corporate-image-card:hover .image-content h4::after {
+    width: 60px;
+}
+
+.image-content p {
+    color: var(--charcoal);
+    line-height: 1.6;
+    font-size: 0.95rem;
+    opacity: 0.9;
+}
+
+/* Minimal Image Animation */
+@keyframes imageReveal {
+    0% {
+        opacity: 0;
+        transform: scale(0.95) translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+@keyframes slideInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Floating Animation */
+@keyframes floatImage {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Image Border Animation */
+.image-wrapper::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 2px solid transparent;
+    border-radius: 12px;
+    z-index: 2;
+    pointer-events: none;
+    opacity: 0;
+    transition: all 0.4s ease;
+}
+
+.corporate-image-card:hover .image-wrapper::before {
+    opacity: 1;
+    border-color: var(--coastal-blue);
+    animation: borderGlow 2s ease-in-out infinite;
+}
+
+@keyframes borderGlow {
+    0%, 100% {
+        box-shadow: 0 0 10px rgba(111, 163, 203, 0.5);
+    }
+    50% {
+        box-shadow: 0 0 20px rgba(111, 163, 203, 0.8);
+    }
+}
+
+/* Responsive Design for Image Grid */
+@media (max-width: 768px) {
+    .corporate-image-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        margin: 2rem auto;
+    }
+    
+    .image-wrapper {
+        height: 240px;
+    }
+    
+    .image-content {
+        padding: 1.5rem;
+    }
+    
+    .image-overlay {
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .corporate-image-grid {
+        gap: 1.5rem;
+    }
+    
+    .image-wrapper {
+        height: 200px;
+    }
+    
+    .image-content {
+        padding: 1.2rem;
+    }
+    
+    .image-content h4 {
+        font-size: 1.1rem;
+    }
+}
+        /* Smooth scroll */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body>
+ <!-- GLOBAL NAVIGATION BAR -->
+<nav class="global-nav">
+    <div class="container">
+        <div class="nav-content">
+
+            <!-- LOGO -->
+            <div class="nav-logo-container">
+                <img src="images/maxpro.jpeg" alt="MAX PRO Cleaning Services" class="site-logo">
+                <div class="nav-logo">SYDNEY MAXPRO SERVICES AUS PTY LTD</div>
+            </div>
+
+            <!-- NAV MENU -->
+            <div class="nav-menu" id="navMenu">
+                <a href="index.html">HOME</a>
+
+                <!-- SERVICES DROPDOWN -->
+                <div class="nav-dropdown">
+                    <a href="services.html" class="nav-dropbtn">
+                        SERVICES <i class="fas fa-chevron-down"></i>
+                    </a>
+                    <div class="nav-dropdown-content">
+                        <a href="security.html">SECURITY SERVICES</a>
+                        <a href="cleaning.html">CLEANING SERVICES</a>
+                    </div>
+                </div>
+
+                <!-- WHO WE ARE DROPDOWN -->
+                <div class="nav-dropdown">
+                    <a href="about.html" class="nav-dropbtn">
+                        WHO WE ARE <i class="fas fa-chevron-down"></i>
+                    </a>
+                    <div class="nav-dropdown-content">
+                        <a href="about.html">ABOUT US</a>
+                        <a href="partners.html">OUR TEAM</a>
+                    </div>
+                </div>
+
+                <a href="contact.html">CONTACT</a>
+
+                <div class="nav-phone">PHONE: 0410 101 081</div>
+            </div>
+
+            <!-- MOBILE TOGGLE -->
+            <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+        </div>
+    </div>
+</nav>
+
+    <main>
+        <!-- SECURITY SERVICES HERO -->
+        <section class="security-hero">
+            <i class="fas fa-shield-alt security-feature"></i>
+            <i class="fas fa-user-shield security-feature"></i>
+            
+            <div class="container">
+                <h1>SECURITY SERVICES</h1>
+                <p class="hero-subtitle">Professional protection for construction sites, schools, warehouses, and corporate environments</p>
+            </div>
+        </section>
+
+        <!-- CONSTRUCTION SITE SECURITY -->
+        <section class="security-section">
+            <div class="container">
+                <h2 class="section-title">CONSTRUCTION SITE SECURITY – SYDNEY MAXPRO SERVICES</h2>
+                <div class="security-content">
+                    <p>Sydney MaxPro Services provides licensed and professional construction site security services. Our teams protect construction sites from theft, vandalism, and unauthorised access, ensuring peace of mind throughout the duration of each project.</p>
+                    
+                    <div class="services-list">
+                        <h3>Our Construction Security Services</h3>
+                        <ul>
+                            <li><strong>Static Security Guards</strong> – Constant on-site presence to deter crime and protect assets</li>
+                            <li><strong>Mobile Patrols</strong> – Regular patrols for larger sites or high-risk areas</li>
+                            <li><strong>Access Control</strong> – Management of entry points and authorised personnel</li>
+                            <li><strong>Asset & Equipment Protection</strong> – Safeguarding tools, machinery, and building materials</li>
+                            <li><strong>24/7 Monitoring</strong> – Continuous vigilance and rapid response capability</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="security-section alt-bg">
+            <div class="container">
+                <h2 class="section-title">SECURITY SERVICES CAPABILITY – SCHOOL SECURITY (STATIC GUARDING)</h2>
+                <div class="security-content">
+                    <p>Sydney MaxPro provides static school security services focused on student safety, staff protection, and effective site control during school hours and events.</p>
+                    
+                    <div class="services-list">
+                        <h3>Scope of services includes:</h3>
+                        <ul>
+                            <li>Static licensed security officers on site</li>
+                            <li>Access control and monitoring of entry and exit points</li>
+                            <li>Student, staff, and visitor safety oversight</li>
+                            <li>Incident prevention, reporting, and escalation</li>
+                            <li>Support during peak periods, drop-off and pick-up times, and school events</li>
+                            <li>Full compliance with school policies and WHS requirements</li>
+                        </ul>
+                        
+                        <div class="current-site">
+                            <h4>Current / Recent Site:</h4>
+                            <p>School Security – Collaroy, NSW</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="security-section">
+            <div class="container">
+                <h2 class="section-title">ASSET PROTECTION – WAREHOUSE SECURITY</h2>
+                <div class="security-content">
+                    <p>Sydney MaxPro delivers asset protection and loss-prevention security services for industrial and warehouse environments, ensuring the safety of goods, infrastructure, and daily operations.</p>
+                    
+                    <div class="services-list">
+                        <h3>Scope of services includes:</h3>
+                        <ul>
+                            <li>Static guarding for warehouses and logistics facilities</li>
+                            <li>Asset protection and loss-prevention patrols</li>
+                            <li>Monitoring of deliveries, dispatch, and loading docks</li>
+                            <li>Access control for staff, contractors, and visitors</li>
+                            <li>Incident reporting and coordination with site management</li>
+                            <li>Compliance with WHS, site inductions, and security protocols</li>
+                        </ul>
+                        
+                        <div class="current-site">
+                            <h4>Current / Recent Site:</h4>
+                            <p>Asset Protection – Warehouse Facility, Kurnell, NSW</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+       <section class="security-section alt-bg">
+    <div class="container">
+        <h2 class="section-title">CORPORATE SECURITY SERVICES</h2>
+        <div class="security-content">
+            
+            <!-- Corporate Security Image Grid -->
+            <div class="corporate-image-grid">
+                <div class="corporate-image-card">
+                    <div class="image-wrapper">
+                        <img src="images/corporate security.jpeg" alt="Corporate Office Security" loading="lazy">
+                        <div class="image-overlay">
+                           
+                        </div>
+                    </div>
+                    <div class="image-content">
+                        <h4>Office & Building Security</h4>
+                        <p>Comprehensive security solutions tailored for corporate offices, ensuring safety for employees, clients, and assets.</p>
+                    </div>
+                </div>
+                
+                <div class="corporate-image-card">
+                    <div class="image-wrapper">
+                        <img src="images/access control.webp" alt="Access Control Systems" loading="lazy">
+                        <div class="image-overlay">
+                           
+                        </div>
+                    </div>
+                    <div class="image-content">
+                        <h4>Access Control & Monitoring</h4>
+                        <p>Advanced access control systems and 24/7 monitoring for complete security coverage in corporate settings.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>Professional Corporate Security Guard Services for Offices</h3>
+                    <p>Our highly trained security guards provide on-site protection for corporate offices, ensuring a safe and secure environment for employees, clients, and visitors. From monitoring access points to patrolling premises, our services are tailored to your unique needs. With a focus on professionalism and discretion, our guards seamlessly integrate into your corporate setting.</p>
+                </div>
+                
+                <div class="service-card">
+                    <h3>Asset Protection and Loss Prevention for Corporate Environments</h3>
+                    <p>Protecting your company's assets is our priority. Our security guards specialise in preventing theft, vandalism, and unauthorised access to sensitive areas. By implementing robust loss prevention strategies, we safeguard your valuable equipment, documents, and intellectual property, giving you peace of mind.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+    </main>
+
+    <footer class="global-footer">
+        <div class="footer-breathing-space"></div>
+        <div class="footer-content">
+            <div class="container">
+                <div class="footer-grid">
+                    <div class="footer-column">
+                        <h4>SYDNEY MAXPRO</h4>
+                        <h4>SERVICES PTY LTD</h4>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <a href="index.html">HOME</a>
+                        <a href="services.html">SERVICES</a>
+                        <a href="about.html">ABOUT</a>
+                        <a href="contact.html">CONTACT</a>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <p>PHONE: 0410 101 081</p>
+                        <p>EMAIL: ADMIN@SYDNEYMAXPRO.COM.AU</p>
+                    </div>
+                    
+                    <!-- Column 4 — Social -->
+                    <div class="footer-column">
+                        <a href="https://www.linkedin.com/company/sydney-maxpro-services-aus-pty-ltd/" class="linkedin-link">
+                            <i class="fab fa-linkedin linkedin-icon"></i>
+                            LINKEDIN
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Intersection Observer for scroll animations
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver(function(entries) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const title = entry.target.querySelector('.section-title');
+                        if (title) {
+                            title.style.opacity = '1';
+                            title.style.transform = 'translateY(0)';
+                        }
+
+                        const content = entry.target.querySelector('.security-content > p');
+                        if (content) {
+                            content.style.opacity = '1';
+                            content.style.transform = 'translateY(0)';
+                        }
+
+                        const servicesList = entry.target.querySelector('.services-list');
+                        if (servicesList) {
+                            servicesList.style.opacity = '1';
+                            servicesList.style.transform = 'translateY(0)';
+                        }
+
+                        const currentSite = entry.target.querySelector('.current-site');
+                        if (currentSite) {
+                            currentSite.style.opacity = '1';
+                            currentSite.style.transform = 'translateY(0)';
+                        }
+
+                        const serviceCards = entry.target.querySelectorAll('.service-card');
+                        serviceCards.forEach(card => {
+                            card.style.opacity = '1';
+                            card.style.transform = 'translateY(0)';
+                        });
+
+                        const listItems = entry.target.querySelectorAll('.services-list li');
+                        listItems.forEach((item, index) => {
+                            setTimeout(() => {
+                                item.style.opacity = '1';
+                                item.style.transform = 'translateX(0)';
+                            }, index * 100);
+                        });
+
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            const sections = document.querySelectorAll('.security-section');
+            sections.forEach(section => {
+                const elements = section.querySelectorAll('.section-title, .security-content > p, .services-list, .current-site, .service-card');
+                elements.forEach(el => {
+                    if (el.classList.contains('section-title')) {
+                        el.style.opacity = '0';
+                        el.style.transform = 'translateY(30px)';
+                        el.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
+                    } else {
+                        el.style.opacity = '0';
+                        el.style.transform = 'translateY(20px)';
+                        el.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
+                    }
+                });
+
+                const listItems = section.querySelectorAll('.services-list li');
+                listItems.forEach(item => {
+                    item.style.opacity = '0';
+                    item.style.transform = 'translateX(-10px)';
+                    item.style.transition = 'opacity 0.5s ease, transform 0.5s ease, all 0.3s ease';
+                });
+
+                observer.observe(section);
+            });
+
+            window.addEventListener('scroll', function() {
+                const scrolled = window.pageYOffset;
+                const hero = document.querySelector('.security-hero');
+                if (hero) {
+                    hero.style.transform = `translateY(${scrolled * 0.08}px)`;
+                }
+            });
+
+            document.querySelectorAll('.services-list li').forEach(item => {
+                item.addEventListener('mouseenter', function() {
+                    this.style.transition = 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)';
+                });
+            });
+
+            const icons = document.querySelectorAll('.security-feature');
+            icons.forEach((icon, index) => {
+                icon.style.animationDelay = `${index * 5}s`;
+            });
+        });
+    </script>
+</body>
+</html>
